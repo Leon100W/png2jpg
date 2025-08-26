@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件选择测试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-area { border: 2px dashed #ccc; padding: 20px; margin: 10px 0; text-align: center; }
+        .test-area:hover { border-color: #007bff; background: #f8f9fa; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        #log { background: #f8f9fa; padding: 10px; margin: 10px 0; border: 1px solid #ddd; height: 200px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>文件选择功能测试</h1>
+    
+    <div class="test-area" id="testArea">
+        <p>点击这里或按钮选择文件</p>
+        <input type="file" id="testFileInput" multiple accept=".png,image/png" hidden>
+        <button id="testBtn">选择文件</button>
+    </div>
+    
+    <div>
+        <h3>选择的文件：</h3>
+        <div id="fileList"></div>
+    </div>
+    
+    <div>
+        <h3>调试日志：</h3>
+        <div id="log"></div>
+        <button onclick="clearLog()">清空日志</button>
+    </div>
+
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const time = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${time}] ${message}<br>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            log('页面加载完成');
+            
+            const testFileInput = document.getElementById('testFileInput');
+            const testBtn = document.getElementById('testBtn');
+            const testArea = document.getElementById('testArea');
+            const fileList = document.getElementById('fileList');
+            
+            if (!testFileInput || !testBtn || !testArea) {
+                log('错误：找不到必要的元素');
+                return;
+            }
+            
+            log('元素查找成功');
+            
+            // 文件输入变化事件
+            testFileInput.addEventListener('change', function(e) {
+                log('文件选择事件触发');
+                const files = Array.from(e.target.files);
+                log(`选择了 ${files.length} 个文件`);
+                
+                fileList.innerHTML = '';
+                files.forEach((file, index) => {
+                    const fileDiv = document.createElement('div');
+                    fileDiv.innerHTML = `${index + 1}. ${file.name} (${(file.size/1024).toFixed(1)}KB)`;
+                    fileList.appendChild(fileDiv);
+                    log(`文件 ${index + 1}: ${file.name}`);
+                });
+            });
+            
+            // 按钮点击事件
+            testBtn.addEventListener('click', function(e) {
+                log('按钮被点击');
+                e.stopPropagation();
+                testFileInput.click();
+                log('触发文件选择');
+            });
+            
+            // 区域点击事件
+            testArea.addEventListener('click', function(e) {
+                if (e.target !== testBtn) {
+                    log('测试区域被点击');
+                    testFileInput.click();
+                }
+            });
+            
+            log('事件监听器设置完成');
+        });
+    </script>
+</body>
+</html>
