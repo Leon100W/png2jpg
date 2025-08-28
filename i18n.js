@@ -346,15 +346,8 @@ const i18n = {
         if (savedLang && this.translations[savedLang]) {
             this.currentLang = savedLang;
         } else {
-            // 检测浏览器语言，默认为英语
-            const browserLang = navigator.language || navigator.userLanguage;
-            if (browserLang.startsWith('zh')) {
-                this.currentLang = 'zh-CN';
-            } else if (browserLang.startsWith('de')) {
-                this.currentLang = 'de-DE';
-            } else {
-                this.currentLang = 'en-US'; // 默认英语
-            }
+            // 强制默认为英语，不进行浏览器语言检测
+            this.currentLang = 'en-US';
         }
         
         // 设置HTML lang属性
