@@ -1,18 +1,25 @@
 // ===== 多语言国际化配置 =====
 
 const i18n = {
-    // 当前语言
-    currentLang: 'zh-CN',
+    // 当前语言 - 默认改为英语
+    currentLang: 'en-US',
     
-    // 语言配置
+    // 语言配置 - 按英语-德语-中文排序
     languages: {
-        'zh-CN': {
-            name: '简体中文',
-            flag: '🇨🇳'
-        },
         'en-US': {
             name: 'English',
-            flag: '🇺🇸'
+            flag: '🇺🇸',
+            order: 1
+        },
+        'de-DE': {
+            name: 'Deutsch',
+            flag: '🇩🇪',
+            order: 2
+        },
+        'zh-CN': {
+            name: '简体中文',
+            flag: '🇨🇳',
+            order: 3
         }
     },
     
@@ -96,7 +103,24 @@ const i18n = {
             switchToChinese: '切换到中文',
             
             // Toast 提示
-            toastCompleted: '转换完成'
+            toastCompleted: '转换完成',
+            
+            // SEO内容
+            seoTitle: '为什么选择我们的PNG转JPG转换器？',
+            seoFastTitle: '🚀 快速高效',
+            seoFastDesc: '在浏览器中即时将PNG文件转换为JPG格式。无需服务器上传，一切都在本地进行，确保最快的速度和隐私保护。',
+            seoBatchTitle: '📦 批量处理',
+            seoBatchDesc: '同时转换多达20张PNG图片。非常适合批量图片处理，节省多文件转换的时间。',
+            seoQualityTitle: '🎛️ 质量控制',
+            seoQualityDesc: '选择低、中、高质量选项，根据您的需求平衡文件大小和图片质量。',
+            seoSecureTitle: '🔒 100% 安全',
+            seoSecureDesc: '您的图片永远不会离开您的设备。所有转换都在浏览器中进行，确保完全的隐私和安全。',
+            seoHowToTitle: '如何在线将PNG转换为JPG：',
+            seoStep1: '点击"选择文件"或拖放您的PNG图片（最多20个文件，每个10MB）',
+            seoStep2: '选择您喜欢的JPG质量（低、中或高）',
+            seoStep3: '点击"开始转换"开始处理',
+            seoStep4: '下载单个文件或将所有文件作为ZIP存档下载',
+            seoKeywords: 'PNG转JPG转换器、将PNG转换为JPEG、在线图片转换器、批量图片转换、免费转换工具、图片格式转换器、PNG JPEG在线转换器'
         },
         
         'en-US': {
@@ -177,7 +201,122 @@ const i18n = {
             switchToChinese: '切换到中文',
             
             // Toast 提示
-            toastCompleted: 'Conversion Completed'
+            toastCompleted: 'Conversion Completed',
+            
+            // SEO Content
+            seoTitle: 'Why Choose Our PNG to JPG Converter?',
+            seoFastTitle: '🚀 Fast & Efficient',
+            seoFastDesc: 'Convert PNG files to JPG format instantly in your browser. No server uploads needed - everything happens locally for maximum speed and privacy.',
+            seoBatchTitle: '📦 Batch Processing',
+            seoBatchDesc: 'Convert up to 20 PNG images simultaneously. Perfect for bulk image processing and saving time on multiple file conversions.',
+            seoQualityTitle: '🎛️ Quality Control',
+            seoQualityDesc: 'Choose from low, medium, or high quality options to balance file size and image quality according to your needs.',
+            seoSecureTitle: '🔒 100% Secure',
+            seoSecureDesc: 'Your images never leave your device. All conversions happen in your browser, ensuring complete privacy and security.',
+            seoHowToTitle: 'How to Convert PNG to JPG Online:',
+            seoStep1: 'Click "Choose Files" or drag and drop your PNG images (max 20 files, 10MB each)',
+            seoStep2: 'Select your preferred JPG quality (low, medium, or high)',
+            seoStep3: 'Click "Start Conversion" to begin the process',
+            seoStep4: 'Download individual files or all as a ZIP archive',
+            seoKeywords: 'PNG to JPG converter, convert PNG to JPEG, online image converter, batch image conversion, free converter tool, image format converter, PNG JPEG converter online'
+        },
+        
+        'de-DE': {
+            // Titel und Beschreibung
+            title: 'PNG zu JPG Konverter',
+            subtitle: 'Online Bildformat Konverter - Kostenlos, Schnell, Anpassbare Qualität',
+            
+            // Upload-Bereich
+            uploadTitle: 'PNG-Dateien hierher ziehen oder klicken zum Auswählen',
+            uploadHint: 'Unterstützt bis zu 20 Bilder, max. 10MB pro Datei',
+            browseBtn: 'Dateien auswählen',
+            selectedFiles: 'Ausgewählte Dateien:',
+            removeFile: 'Entfernen',
+            
+            // Qualitätsauswahl
+            qualityTitle: 'JPG Komprimierungsqualität:',
+            qualityLow: 'Niedrige Qualität',
+            qualityMedium: 'Mittlere Qualität',
+            qualityHigh: 'Hohe Qualität',
+            qualityLowDesc: 'Kleinere Dateigröße, schnellere Übertragung',
+            qualityMediumDesc: 'Ausgewogene Qualität und Größe (Empfohlen)',
+            qualityHighDesc: 'Beste Qualität, größere Dateigröße',
+            
+            // Fortschritt
+            progressTitle: 'Konvertierungsfortschritt:',
+            processing: 'Verarbeitung:',
+            timeEstimate: 'Geschätzte verbleibende Zeit:',
+            
+            // Schaltflächen
+            startConversion: '🚀 Konvertierung starten',
+            converting: '🔄 Konvertiert...',
+            resetFiles: '🔄 Dateien zurücksetzen',
+            downloadAll: '📦 Alle als ZIP herunterladen',
+            downloadZipping: '📦 ZIP wird erstellt...',
+            clearResults: '🗑️ Ergebnisse löschen',
+            download: '⬇️ Herunterladen',
+            
+            // Ergebnisse
+            resultTitle: 'Konvertierungsergebnisse:',
+            completed: 'Abgeschlossen:',
+            successful: 'Erfolgreich:',
+            failed: 'Fehlgeschlagen:',
+            files: 'Dateien',
+            
+            // Statusleiste
+            statusReady: 'Bereit',
+            statusConverting: 'Konvertiert...',
+            statusCompleted: 'Konvertierung abgeschlossen',
+            statusFailed: 'Konvertierung fehlgeschlagen',
+            totalTime: 'Gesamtzeit:',
+            avgSpeed: 'Durchschnittsgeschwindigkeit:',
+            seconds: 'Sekunden',
+            minutes: 'Minuten',
+            filePerSecond: '/Datei',
+            
+            // Fehlermeldungen
+            errorNotPng: 'Keine PNG-Datei',
+            errorTooLarge: 'Datei größer als 10MB',
+            errorTooMany: 'Maximal 20 Dateien erlaubt',
+            errorConversion: 'Konvertierung fehlgeschlagen',
+            errorNoFiles: 'Keine gültigen PNG-Dateien zum Konvertieren',
+            errorNoValidFiles: 'Keine erfolgreich konvertierten Dateien zum Herunterladen',
+            errorPackaging: 'Fehler beim Erstellen des Download-Pakets',
+            errorElementNotFound: 'Wesentliche Elemente nicht gefunden',
+            
+            // Benachrichtigungen
+            fileSelected: 'ausgewählt',
+            fileValidation: 'davon',
+            filesValid: 'gültig',
+            currentSize: 'aktuell',
+            convertedArrow: '→',
+            fileSize: 'Dateigröße',
+            error: 'Fehler',
+            
+            // Sprachwechsel
+            languageSwitch: 'Sprache',
+            switchToEnglish: 'Switch to English',
+            switchToChinese: '切换到中文',
+            
+            // Toast-Benachrichtigung
+            toastCompleted: 'Konvertierung abgeschlossen',
+            
+            // SEO-Inhalt
+            seoTitle: 'Warum unseren PNG zu JPG Konverter wählen?',
+            seoFastTitle: '🚀 Schnell & Effizient',
+            seoFastDesc: 'Konvertieren Sie PNG-Dateien sofort in Ihrem Browser zu JPG-Format. Keine Server-Uploads erforderlich - alles passiert lokal für maximale Geschwindigkeit und Privatsphäre.',
+            seoBatchTitle: '📦 Stapelverarbeitung',
+            seoBatchDesc: 'Konvertieren Sie bis zu 20 PNG-Bilder gleichzeitig. Perfekt für die Massenverarbeitung von Bildern und Zeitersparnis bei mehreren Dateikonvertierungen.',
+            seoQualityTitle: '🎛️ Qualitätskontrolle',
+            seoQualityDesc: 'Wählen Sie zwischen niedrigen, mittleren oder hohen Qualitätsoptionen, um Dateigröße und Bildqualität nach Ihren Bedürfnissen auszubalancieren.',
+            seoSecureTitle: '🔒 100% Sicher',
+            seoSecureDesc: 'Ihre Bilder verlassen niemals Ihr Gerät. Alle Konvertierungen finden in Ihrem Browser statt und gewährleisten vollständige Privatsphäre und Sicherheit.',
+            seoHowToTitle: 'Wie PNG online zu JPG konvertieren:',
+            seoStep1: 'Klicken Sie auf "Dateien auswählen" oder ziehen Sie Ihre PNG-Bilder per Drag & Drop (max. 20 Dateien, je 10MB)',
+            seoStep2: 'Wählen Sie Ihre bevorzugte JPG-Qualität (niedrig, mittel oder hoch)',
+            seoStep3: 'Klicken Sie auf "Konvertierung starten", um den Prozess zu beginnen',
+            seoStep4: 'Laden Sie einzelne Dateien oder alle als ZIP-Archiv herunter',
+            seoKeywords: 'PNG zu JPG Konverter, PNG zu JPEG konvertieren, Online-Bildkonverter, Stapel-Bildkonvertierung, kostenloser Konverter, Bildformat-Konverter, PNG JPEG Konverter online'
         }
     },
     
@@ -207,12 +346,14 @@ const i18n = {
         if (savedLang && this.translations[savedLang]) {
             this.currentLang = savedLang;
         } else {
-            // 检测浏览器语言
+            // 检测浏览器语言，默认为英语
             const browserLang = navigator.language || navigator.userLanguage;
             if (browserLang.startsWith('zh')) {
                 this.currentLang = 'zh-CN';
+            } else if (browserLang.startsWith('de')) {
+                this.currentLang = 'de-DE';
             } else {
-                this.currentLang = 'en-US';
+                this.currentLang = 'en-US'; // 默认英语
             }
         }
         
@@ -226,38 +367,112 @@ const i18n = {
         this.updatePageTexts();
     },
     
-    // 创建语言切换器
+    // 获取排序后的语言列表
+    getSortedLanguages() {
+        return Object.entries(this.languages)
+            .sort(([,a], [,b]) => a.order - b.order)
+            .map(([code, info]) => ({ code, ...info }));
+    },
+
+    // 创建语言切换器下拉菜单
     createLanguageSwitch() {
         const header = document.querySelector('.header');
         if (!header) return;
         
+        const currentLangInfo = this.languages[this.currentLang];
+        const sortedLanguages = this.getSortedLanguages();
+        
         const langSwitch = document.createElement('div');
         langSwitch.className = 'language-switch';
         langSwitch.innerHTML = `
-            <button class="lang-btn" data-lang="zh-CN" ${this.currentLang === 'zh-CN' ? 'class="active"' : ''}>
-                🇨🇳 中文
+            <div class="lang-dropdown">
+                <button class="lang-current" id="langCurrentBtn">
+                    ${currentLangInfo.flag} ${currentLangInfo.name}
+                    <span class="dropdown-arrow">▼</span>
             </button>
-            <button class="lang-btn" data-lang="en-US" ${this.currentLang === 'en-US' ? 'class="active"' : ''}>
-                🇺🇸 English
-            </button>
+                <div class="lang-options" id="langOptions">
+                    ${sortedLanguages.map(lang => `
+                        <div class="lang-option ${lang.code === this.currentLang ? 'active' : ''}" data-lang="${lang.code}">
+                            <span class="lang-flag">${lang.flag}</span>
+                            <span class="lang-name">${lang.name}</span>
+                            ${lang.code === this.currentLang ? '<span class="check-mark">✓</span>' : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
         `;
         
         header.appendChild(langSwitch);
         
-        // 添加点击事件
-        langSwitch.addEventListener('click', (e) => {
-            if (e.target.classList.contains('lang-btn')) {
-                const newLang = e.target.getAttribute('data-lang');
-                if (newLang !== this.currentLang) {
-                    this.setLanguage(newLang);
-                    // 更新按钮状态
-                    langSwitch.querySelectorAll('.lang-btn').forEach(btn => {
-                        btn.classList.remove('active');
-                    });
-                    e.target.classList.add('active');
-                }
+        const currentBtn = langSwitch.querySelector('#langCurrentBtn');
+        const optionsPanel = langSwitch.querySelector('#langOptions');
+        const dropdownArrow = langSwitch.querySelector('.dropdown-arrow');
+        
+        // 切换下拉菜单显示/隐藏
+        currentBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = optionsPanel.classList.contains('show');
+            if (isOpen) {
+                this.closeLangDropdown(optionsPanel, dropdownArrow);
+            } else {
+                this.openLangDropdown(optionsPanel, dropdownArrow);
             }
         });
+        
+        // 选择语言选项
+        optionsPanel.addEventListener('click', (e) => {
+            const langOption = e.target.closest('.lang-option');
+            if (langOption) {
+                const newLang = langOption.getAttribute('data-lang');
+                if (newLang !== this.currentLang) {
+                    this.setLanguage(newLang);
+                    this.updateLanguageDropdown(langSwitch);
+                }
+                this.closeLangDropdown(optionsPanel, dropdownArrow);
+            }
+        });
+        
+        // 点击外部关闭下拉菜单
+        document.addEventListener('click', (e) => {
+            if (!langSwitch.contains(e.target)) {
+                this.closeLangDropdown(optionsPanel, dropdownArrow);
+            }
+        });
+    },
+
+    // 打开语言下拉菜单
+    openLangDropdown(optionsPanel, dropdownArrow) {
+        optionsPanel.classList.add('show');
+        dropdownArrow.style.transform = 'rotate(180deg)';
+    },
+
+    // 关闭语言下拉菜单
+    closeLangDropdown(optionsPanel, dropdownArrow) {
+        optionsPanel.classList.remove('show');
+        dropdownArrow.style.transform = 'rotate(0deg)';
+    },
+
+    // 更新语言下拉菜单显示
+    updateLanguageDropdown(langSwitch) {
+        const currentLangInfo = this.languages[this.currentLang];
+        const currentBtn = langSwitch.querySelector('#langCurrentBtn');
+        const optionsPanel = langSwitch.querySelector('#langOptions');
+        
+        // 更新当前显示按钮
+        currentBtn.innerHTML = `
+            ${currentLangInfo.flag} ${currentLangInfo.name}
+            <span class="dropdown-arrow">▼</span>
+        `;
+        
+        // 更新选项列表的激活状态
+        const sortedLanguages = this.getSortedLanguages();
+        optionsPanel.innerHTML = sortedLanguages.map(lang => `
+            <div class="lang-option ${lang.code === this.currentLang ? 'active' : ''}" data-lang="${lang.code}">
+                <span class="lang-flag">${lang.flag}</span>
+                <span class="lang-name">${lang.name}</span>
+                ${lang.code === this.currentLang ? '<span class="check-mark">✓</span>' : ''}
+            </div>
+        `).join('');
     },
     
     // 更新页面所有文本
@@ -327,6 +542,9 @@ const i18n = {
         
         // 更新状态栏标签
         this.updateStatusBarLabels();
+        
+        // 更新SEO内容
+        this.updateSeoContent();
     },
     
     // 更新状态栏标签
@@ -350,6 +568,58 @@ const i18n = {
             <span>${this.t('avgSpeed')}</span>
             <span id="avgSpeed">${avgSpeedSpan ? avgSpeedSpan.textContent : '-'}</span>
         `;
+    },
+    
+    // 更新SEO内容
+    updateSeoContent() {
+        // 更新SEO标题
+        const seoTitle = document.getElementById('seoTitle');
+        if (seoTitle) seoTitle.textContent = this.t('seoTitle');
+        
+        // 更新功能特点
+        const seoFastTitle = document.getElementById('seoFastTitle');
+        if (seoFastTitle) seoFastTitle.textContent = this.t('seoFastTitle');
+        
+        const seoFastDesc = document.getElementById('seoFastDesc');
+        if (seoFastDesc) seoFastDesc.textContent = this.t('seoFastDesc');
+        
+        const seoBatchTitle = document.getElementById('seoBatchTitle');
+        if (seoBatchTitle) seoBatchTitle.textContent = this.t('seoBatchTitle');
+        
+        const seoBatchDesc = document.getElementById('seoBatchDesc');
+        if (seoBatchDesc) seoBatchDesc.textContent = this.t('seoBatchDesc');
+        
+        const seoQualityTitle = document.getElementById('seoQualityTitle');
+        if (seoQualityTitle) seoQualityTitle.textContent = this.t('seoQualityTitle');
+        
+        const seoQualityDesc = document.getElementById('seoQualityDesc');
+        if (seoQualityDesc) seoQualityDesc.textContent = this.t('seoQualityDesc');
+        
+        const seoSecureTitle = document.getElementById('seoSecureTitle');
+        if (seoSecureTitle) seoSecureTitle.textContent = this.t('seoSecureTitle');
+        
+        const seoSecureDesc = document.getElementById('seoSecureDesc');
+        if (seoSecureDesc) seoSecureDesc.textContent = this.t('seoSecureDesc');
+        
+        // 更新使用说明
+        const seoHowToTitle = document.getElementById('seoHowToTitle');
+        if (seoHowToTitle) seoHowToTitle.textContent = this.t('seoHowToTitle');
+        
+        const seoStep1 = document.getElementById('seoStep1');
+        if (seoStep1) seoStep1.textContent = this.t('seoStep1');
+        
+        const seoStep2 = document.getElementById('seoStep2');
+        if (seoStep2) seoStep2.textContent = this.t('seoStep2');
+        
+        const seoStep3 = document.getElementById('seoStep3');
+        if (seoStep3) seoStep3.textContent = this.t('seoStep3');
+        
+        const seoStep4 = document.getElementById('seoStep4');
+        if (seoStep4) seoStep4.textContent = this.t('seoStep4');
+        
+        // 更新关键词
+        const seoKeywords = document.getElementById('seoKeywords');
+        if (seoKeywords) seoKeywords.textContent = this.t('seoKeywords');
     }
 };
 
